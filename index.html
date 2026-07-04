@@ -130,24 +130,6 @@
       font-size: 20px;
     }
 
-    .drive {
-      background: linear-gradient(135deg, #0f9d58, #34a853);
-    }
-
-    .drive:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 28px rgba(15,157,88,0.35);
-    }
-
-    .dropbox {
-      background: linear-gradient(135deg, #0061ff, #3b82f6);
-    }
-
-    .dropbox:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 28px rgba(0,97,255,0.35);
-    }
-
     .mirror {
       background: linear-gradient(135deg, #0061ff, #3b82f6);
     }
@@ -156,6 +138,69 @@
       transform: translateY(-4px);
       box-shadow: 0 16px 28px rgba(31,42,68,0.35);
     }
+    
+    /* APP INFO */
+.app-info{
+    margin-top:25px;
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.info-card{
+    background:#fff;
+    border:1px solid #dbe9ff;
+    border-radius:16px;
+    padding:15px 18px;
+    display:flex;
+    align-items:center;
+    gap:12px;
+    min-width:180px;
+    box-shadow:0 10px 20px rgba(0,0,0,.06);
+    transition:.25s ease;
+}
+
+.info-card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 15px 25px rgba(14,58,107,.12);
+}
+
+.info-card i{
+    width:46px;
+    height:46px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(135deg,#0e3a6b,#2c7df0);
+    color:#fff;
+    font-size:20px;
+}
+
+.info-card small{
+    display:block;
+    color:#6b7b8f;
+    font-size:13px;
+    margin-bottom:3px;
+}
+
+.info-card strong{
+    color:#0b2b44;
+    font-size:16px;
+}
+
+@media(max-width:600px){
+    .app-info{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .info-card{
+        width:100%;
+        max-width:320px;
+    }
+}
 
     /* GALLERY */
     .gallery {
@@ -267,18 +312,6 @@
 
     <div class="buttons">
 
-      <!-- GOOGLE DRIVE DIRECT -->
-      <a class="btn drive"
-         href="https://drive.google.com/file/d/1-nmEZRWQtURBBk55UgSNvEI8lItcrzsI/view?usp=drivesdk">
-        <i class="fab fa-google-drive"></i> Google Drive
-      </a>
-
-      <!-- DROPBOX DIRECT -->
-      <a class="btn dropbox"
-         href="https://www.dropbox.com/s/YOUR_FILE/SmartStudent.apk?dl=1">
-        <i class="fab fa-dropbox"></i> Dropbox
-      </a>
-
       <!-- MIRROR -->
       <a class="btn mirror"
          href="https://www.mediafire.com/file/zskojcz1pcb52ue/Smart_Student_v1.5.apk/file/SmartStudent.apk">
@@ -287,6 +320,33 @@
 
     </div>
   </div>
+  
+  <!-- APP INFO -->
+<div class="app-info">
+    <div class="info-card">
+        <i class="fas fa-mobile-alt"></i>
+        <div>
+            <small>App Version</small>
+            <strong>v2.0</strong>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <i class="fas fa-download"></i>
+        <div>
+            <small>App Size</small>
+            <strong>5.05 MB</strong>
+        </div>
+    </div>
+
+    <div class="info-card">
+        <i class="fab fa-android"></i>
+        <div>
+            <small>Compatible</small>
+            <strong>Android 5.0+</strong>
+        </div>
+    </div>
+</div>
 
   <!-- GALLERY -->
   <div class="gallery">
